@@ -1,0 +1,15 @@
+{
+  "originHash" : "4205c047a5cba41ecb2e39acfc607a191db5d3eaaddb4a60f18ebb60fd45bcd0",
+  "pins" : [
+    {
+      "identity" : "verkada-pass-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/verkada/Verkada-Pass-iOS-SDK",
+      "state" : {
+        "revision" : "d84e61c49de33583cc6986c2115a95959c967399",
+        "version" : "0.0.1"
+      }
+    }
+  ],
+  "version" : 3
+}

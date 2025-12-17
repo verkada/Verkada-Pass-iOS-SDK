@@ -1,0 +1,545 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84292CF72FB633000062DAC0 /* VerkadaPassSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 84292CF62FB633000062DAC0 /* VerkadaPassSDK */; };
+		84CD606F2FABA7540039F227 /* VerkadaPassSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 849A4FC32EF353F000679947 /* VerkadaPassSDK */; };
+		84DEE3022EA6B2D300F5A114 /* VerkadaPassSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 84DEE3012EA6B2D300F5A114 /* VerkadaPassSDK */; };
+		84FE4BAC2F11BFFD00C1862D /* VerkadaPassSDK in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 84DEE3012EA6B2D300F5A114 /* VerkadaPassSDK */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84DEE2E42EA6B2B800F5A114 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84DEE2CE2EA6B2B600F5A114 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84DEE2D52EA6B2B600F5A114;
+			remoteInfo = "verkada-pass-sdk-example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		84FE4BAD2F11BFFD00C1862D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				84FE4BAC2F11BFFD00C1862D /* VerkadaPassSDK in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		84DEE2D62EA6B2B600F5A114 /* VerkadaPassSDKExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VerkadaPassSDKExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84DEE2E32EA6B2B800F5A114 /* VerkadaPassSDKExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VerkadaPassSDKExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		84BBBDA52ECCE8F800D326CB /* Exceptions for "VerkadaPassSDKExample" folder in "VerkadaPassSDKExample" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 84DEE2D52EA6B2B600F5A114 /* VerkadaPassSDKExample */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		84DEE2D82EA6B2B600F5A114 /* VerkadaPassSDKExample */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				84BBBDA52ECCE8F800D326CB /* Exceptions for "VerkadaPassSDKExample" folder in "VerkadaPassSDKExample" target */,
+			);
+			path = VerkadaPassSDKExample;
+			sourceTree = "<group>";
+		};
+		84DEE2E62EA6B2B800F5A114 /* VerkadaPassSDKExampleTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = VerkadaPassSDKExampleTests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84DEE2D32EA6B2B600F5A114 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84CD606F2FABA7540039F227 /* VerkadaPassSDK in Frameworks */,
+				84DEE3022EA6B2D300F5A114 /* VerkadaPassSDK in Frameworks */,
+				84292CF72FB633000062DAC0 /* VerkadaPassSDK in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84DEE2E02EA6B2B800F5A114 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84DEE2CD2EA6B2B600F5A114 = {
+			isa = PBXGroup;
+			children = (
+				84DEE2D82EA6B2B600F5A114 /* VerkadaPassSDKExample */,
+				84DEE2E62EA6B2B800F5A114 /* VerkadaPassSDKExampleTests */,
+				84DEE2D72EA6B2B600F5A114 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84DEE2D72EA6B2B600F5A114 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84DEE2D62EA6B2B600F5A114 /* VerkadaPassSDKExample.app */,
+				84DEE2E32EA6B2B800F5A114 /* VerkadaPassSDKExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84DEE2D52EA6B2B600F5A114 /* VerkadaPassSDKExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84DEE2F72EA6B2B800F5A114 /* Build configuration list for PBXNativeTarget "VerkadaPassSDKExample" */;
+			buildPhases = (
+				84DEE2D22EA6B2B600F5A114 /* Sources */,
+				84DEE2D32EA6B2B600F5A114 /* Frameworks */,
+				84DEE2D42EA6B2B600F5A114 /* Resources */,
+				84FE4BAD2F11BFFD00C1862D /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				84DEE2D82EA6B2B600F5A114 /* VerkadaPassSDKExample */,
+			);
+			name = VerkadaPassSDKExample;
+			packageProductDependencies = (
+				84DEE3012EA6B2D300F5A114 /* VerkadaPassSDK */,
+				849A4FC32EF353F000679947 /* VerkadaPassSDK */,
+				84292CF62FB633000062DAC0 /* VerkadaPassSDK */,
+			);
+			productName = "verkada-pass-sdk-example";
+			productReference = 84DEE2D62EA6B2B600F5A114 /* VerkadaPassSDKExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84DEE2E22EA6B2B800F5A114 /* VerkadaPassSDKExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84DEE2FA2EA6B2B800F5A114 /* Build configuration list for PBXNativeTarget "VerkadaPassSDKExampleTests" */;
+			buildPhases = (
+				84DEE2DF2EA6B2B800F5A114 /* Sources */,
+				84DEE2E02EA6B2B800F5A114 /* Frameworks */,
+				84DEE2E12EA6B2B800F5A114 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84DEE2E52EA6B2B800F5A114 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				84DEE2E62EA6B2B800F5A114 /* VerkadaPassSDKExampleTests */,
+			);
+			name = VerkadaPassSDKExampleTests;
+			packageProductDependencies = (
+			);
+			productName = "verkada-pass-sdk-exampleTests";
+			productReference = 84DEE2E32EA6B2B800F5A114 /* VerkadaPassSDKExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84DEE2CE2EA6B2B600F5A114 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					84DEE2D52EA6B2B600F5A114 = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+					84DEE2E22EA6B2B800F5A114 = {
+						CreatedOnToolsVersion = 26.0.1;
+						TestTargetID = 84DEE2D52EA6B2B600F5A114;
+					};
+				};
+			};
+			buildConfigurationList = 84DEE2D12EA6B2B600F5A114 /* Build configuration list for PBXProject "VerkadaPassSDKExample" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84DEE2CD2EA6B2B600F5A114;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				84FC1DD82FBE237D00FC5A48 /* XCRemoteSwiftPackageReference "Verkada-Pass-iOS-SDK" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 84DEE2D72EA6B2B600F5A114 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84DEE2D52EA6B2B600F5A114 /* VerkadaPassSDKExample */,
+				84DEE2E22EA6B2B800F5A114 /* VerkadaPassSDKExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84DEE2D42EA6B2B600F5A114 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84DEE2E12EA6B2B800F5A114 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84DEE2D22EA6B2B600F5A114 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84DEE2DF2EA6B2B800F5A114 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84DEE2E52EA6B2B800F5A114 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84DEE2D52EA6B2B600F5A114 /* VerkadaPassSDKExample */;
+			targetProxy = 84DEE2E42EA6B2B800F5A114 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		84DEE2F52EA6B2B800F5A114 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = G3762778B5;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		84DEE2F62EA6B2B800F5A114 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = G3762778B5;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84DEE2F82EA6B2B800F5A114 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G3762778B5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VerkadaPassSDKExample/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "To unlock doors with BLE in a background";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "To unlock doors reliably in a background";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "To unlock doors foreground withing an allowed radius";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.verkada.verkada-pass-sdk-example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84DEE2F92EA6B2B800F5A114 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G3762778B5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VerkadaPassSDKExample/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "To unlock doors with BLE in a background";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "To unlock doors reliably in a background";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "To unlock doors foreground withing an allowed radius";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.verkada.verkada-pass-sdk-example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		84DEE2FB2EA6B2B800F5A114 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G3762778B5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.verkada.verkada-pass-sdk-exampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VerkadaPassSDKExample.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VerkadaPassSDKExample";
+			};
+			name = Debug;
+		};
+		84DEE2FC2EA6B2B800F5A114 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G3762778B5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.verkada.verkada-pass-sdk-exampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VerkadaPassSDKExample.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VerkadaPassSDKExample";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84DEE2D12EA6B2B600F5A114 /* Build configuration list for PBXProject "VerkadaPassSDKExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84DEE2F52EA6B2B800F5A114 /* Debug */,
+				84DEE2F62EA6B2B800F5A114 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84DEE2F72EA6B2B800F5A114 /* Build configuration list for PBXNativeTarget "VerkadaPassSDKExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84DEE2F82EA6B2B800F5A114 /* Debug */,
+				84DEE2F92EA6B2B800F5A114 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84DEE2FA2EA6B2B800F5A114 /* Build configuration list for PBXNativeTarget "VerkadaPassSDKExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84DEE2FB2EA6B2B800F5A114 /* Debug */,
+				84DEE2FC2EA6B2B800F5A114 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		84FC1DD82FBE237D00FC5A48 /* XCRemoteSwiftPackageReference "Verkada-Pass-iOS-SDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/verkada/Verkada-Pass-iOS-SDK";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		84292CF62FB633000062DAC0 /* VerkadaPassSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = VerkadaPassSDK;
+		};
+		849A4FC32EF353F000679947 /* VerkadaPassSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = VerkadaPassSDK;
+		};
+		84DEE3012EA6B2D300F5A114 /* VerkadaPassSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = VerkadaPassSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 84DEE2CE2EA6B2B600F5A114 /* Project object */;
+}

@@ -24,6 +24,7 @@ let package = Package(
                 .target(name: "VerkadaPassSDK"),
                 .product(name: "KeychainAccess", package: "KeychainAccess"),
                 .product(name: "Sodium", package: "swift-sodium"),
+                .product(name: "Clibsodium", package: "swift-sodium"),
             ],
             path: "Sources/VerkadaPassSDKWrapper"
         ),

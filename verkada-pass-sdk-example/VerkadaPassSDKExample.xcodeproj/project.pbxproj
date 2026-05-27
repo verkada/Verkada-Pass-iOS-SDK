@@ -515,7 +515,7 @@
 			repositoryURL = "https://github.com/verkada/Verkada-Pass-iOS-SDK";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.1;
+				minimumVersion = 0.1.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

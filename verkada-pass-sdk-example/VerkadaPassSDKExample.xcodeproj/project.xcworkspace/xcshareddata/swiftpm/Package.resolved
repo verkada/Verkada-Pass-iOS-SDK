@@ -6,7 +6,7 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/verkada/Verkada-Pass-iOS-SDK",
       "state" : {
-        "revision" : "b475868a16793ce268d4a2e4779890f4258274f7",
+        "revision" : "c8590b55fc5ad956830121b8a577b488c8d72e77",
         "version" : "0.1.0"
       }
     }

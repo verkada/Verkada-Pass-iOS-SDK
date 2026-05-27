@@ -1,13 +1,22 @@
 {
-  "originHash" : "4205c047a5cba41ecb2e39acfc607a191db5d3eaaddb4a60f18ebb60fd45bcd0",
+  "originHash" : "6aa6ffea7ce2747630ba3513f2f35d026042939eb8229b4eb4e1234b50d32e6b",
   "pins" : [
     {
-      "identity" : "verkada-pass-ios-sdk",
+      "identity" : "keychainaccess",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/verkada/Verkada-Pass-iOS-SDK",
+      "location" : "https://github.com/kishikawakatsumi/KeychainAccess.git",
       "state" : {
-        "revision" : "c8590b55fc5ad956830121b8a577b488c8d72e77",
-        "version" : "0.1.0"
+        "revision" : "84e546727d66f1adc5439debad16270d0fdd04e7",
+        "version" : "4.2.2"
+      }
+    },
+    {
+      "identity" : "swift-sodium",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jedisct1/swift-sodium.git",
+      "state" : {
+        "revision" : "cfd195c76882aa9b997560ca7cb95d72fbf5db00",
+        "version" : "0.11.0"
       }
     }
   ],

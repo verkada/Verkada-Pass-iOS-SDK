@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		84DEE3022EA6B2D300F5A114 /* VerkadaPassSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 84DEE3012EA6B2D300F5A114 /* VerkadaPassSDK */; };
-		84FE4BAC2F11BFFD00C1862D /* VerkadaPassSDK in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 84DEE3012EA6B2D300F5A114 /* VerkadaPassSDK */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -20,20 +19,6 @@
 			remoteInfo = "verkada-pass-sdk-example";
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		84FE4BAD2F11BFFD00C1862D /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				84FE4BAC2F11BFFD00C1862D /* VerkadaPassSDK in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		84DEE2D62EA6B2B600F5A114 /* VerkadaPassSDKExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VerkadaPassSDKExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,7 +98,6 @@
 				84DEE2D22EA6B2B600F5A114 /* Sources */,
 				84DEE2D32EA6B2B600F5A114 /* Frameworks */,
 				84DEE2D42EA6B2B600F5A114 /* Resources */,
-				84FE4BAD2F11BFFD00C1862D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

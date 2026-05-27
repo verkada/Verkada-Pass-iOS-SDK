@@ -15,7 +15,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/kishikawakatsumi/KeychainAccess.git", from: "4.2.0"),
         .package(url: "https://github.com/jedisct1/swift-sodium.git",
-                 revision: "cfd195c76882aa9b997560ca7cb95d72fbf5db00"),
+                 from: "0.11.0"),
     ],
     targets: [
         .target(

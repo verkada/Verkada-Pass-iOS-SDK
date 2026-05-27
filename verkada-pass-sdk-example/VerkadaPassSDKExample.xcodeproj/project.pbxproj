@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		84292CF72FB633000062DAC0 /* VerkadaPassSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 84292CF62FB633000062DAC0 /* VerkadaPassSDK */; };
-		84CD606F2FABA7540039F227 /* VerkadaPassSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 849A4FC32EF353F000679947 /* VerkadaPassSDK */; };
 		84DEE3022EA6B2D300F5A114 /* VerkadaPassSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 84DEE3012EA6B2D300F5A114 /* VerkadaPassSDK */; };
 		84FE4BAC2F11BFFD00C1862D /* VerkadaPassSDK in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 84DEE3012EA6B2D300F5A114 /* VerkadaPassSDK */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -73,9 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84CD606F2FABA7540039F227 /* VerkadaPassSDK in Frameworks */,
 				84DEE3022EA6B2D300F5A114 /* VerkadaPassSDK in Frameworks */,
-				84292CF72FB633000062DAC0 /* VerkadaPassSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,8 +125,6 @@
 			name = VerkadaPassSDKExample;
 			packageProductDependencies = (
 				84DEE3012EA6B2D300F5A114 /* VerkadaPassSDK */,
-				849A4FC32EF353F000679947 /* VerkadaPassSDK */,
-				84292CF62FB633000062DAC0 /* VerkadaPassSDK */,
 			);
 			productName = "verkada-pass-sdk-example";
 			productReference = 84DEE2D62EA6B2B600F5A114 /* VerkadaPassSDKExample.app */;
@@ -527,16 +521,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		84292CF62FB633000062DAC0 /* VerkadaPassSDK */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = VerkadaPassSDK;
-		};
-		849A4FC32EF353F000679947 /* VerkadaPassSDK */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = VerkadaPassSDK;
-		};
 		84DEE3012EA6B2D300F5A114 /* VerkadaPassSDK */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 847183182FC76BC800E9962B /* XCRemoteSwiftPackageReference "Verkada-Pass-iOS-SDK" */;
 			productName = VerkadaPassSDK;
 		};
 /* End XCSwiftPackageProductDependency section */

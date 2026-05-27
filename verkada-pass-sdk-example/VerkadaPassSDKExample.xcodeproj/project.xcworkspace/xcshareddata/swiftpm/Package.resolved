@@ -1,5 +1,5 @@
 {
-  "originHash" : "6aa6ffea7ce2747630ba3513f2f35d026042939eb8229b4eb4e1234b50d32e6b",
+  "originHash" : "4205c047a5cba41ecb2e39acfc607a191db5d3eaaddb4a60f18ebb60fd45bcd0",
   "pins" : [
     {
       "identity" : "keychainaccess",
@@ -15,8 +15,17 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/jedisct1/swift-sodium.git",
       "state" : {
-        "revision" : "cfd195c76882aa9b997560ca7cb95d72fbf5db00",
+        "revision" : "df17ff800f85491b2cdb5c9d0426dacb40761ad2",
         "version" : "0.11.0"
+      }
+    },
+    {
+      "identity" : "verkada-pass-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/verkada/Verkada-Pass-iOS-SDK",
+      "state" : {
+        "revision" : "bde5e788eae110c72acfcea1f689e2c45c6f23f6",
+        "version" : "0.1.0"
       }
     }
   ],

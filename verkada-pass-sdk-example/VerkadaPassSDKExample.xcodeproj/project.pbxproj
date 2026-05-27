@@ -188,7 +188,7 @@
 			mainGroup = 84DEE2CD2EA6B2B600F5A114;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				84FC1DD82FBE237D00FC5A48 /* XCRemoteSwiftPackageReference "Verkada-Pass-iOS-SDK" */,
+				847183182FC76BC800E9962B /* XCRemoteSwiftPackageReference "Verkada-Pass-iOS-SDK" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 84DEE2D72EA6B2B600F5A114 /* Products */;
@@ -516,7 +516,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		84FC1DD82FBE237D00FC5A48 /* XCRemoteSwiftPackageReference "Verkada-Pass-iOS-SDK" */ = {
+		847183182FC76BC800E9962B /* XCRemoteSwiftPackageReference "Verkada-Pass-iOS-SDK" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/verkada/Verkada-Pass-iOS-SDK";
 			requirement = {

@@ -8,6 +8,8 @@ A Swift SDK for embedding Verkada Pass — Verkada's mobile credential — into 
 
 ## Installation
 
+A special API token is required to use the Verkada Pass SDK. If you are interested in implementing this SDK, contact Verkada support.
+
 ### Swift Package Manager
 
 Add the package to your project:

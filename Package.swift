@@ -9,7 +9,10 @@ let package = Package(
     products: [
         .library(
             name: "VerkadaPassSDK",
-            targets: ["VerkadaPassSDKWrapper"]
+            // The binary target is exposed directly so consumers import the
+            // prebuilt module itself. The wrapper cannot re-export it: see
+            // Sources/VerkadaPassSDKWrapper/Reexport.swift.
+            targets: ["VerkadaPassSDKWrapper", "VerkadaPassSDK"]
         ),
     ],
     dependencies: [

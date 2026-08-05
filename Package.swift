@@ -4,7 +4,10 @@ import PackageDescription
 let package = Package(
     name: "VerkadaPassSDK",
     platforms: [
-        .iOS(.v15),
+        // Must match the minos of the xcframework in `binaryTarget` below. Declaring a lower
+        // floor than the binary lets consumers build and then crash at launch: dyld refuses a
+        // framework whose minos exceeds the running OS.
+        .iOS("13.1"),
     ],
     products: [
         .library(

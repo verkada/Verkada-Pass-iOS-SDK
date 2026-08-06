@@ -2,7 +2,7 @@
 
 A Swift SDK for embedding Verkada Pass — Verkada's mobile credential — into iOS apps. The SDK authenticates a user against a Verkada Command organization, surfaces the doors and elevators they can unlock, advertises the device as a BLE credential, and issues remote unlocks with optional geofence enforcement.
 
-- **Platform:** iOS 13.1+
+- **Platform:** iOS 13+
 - **Language:** Swift 5.9
 - **Distribution:** Swift Package Manager (binary `XCFramework`)
 

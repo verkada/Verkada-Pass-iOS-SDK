@@ -16,7 +16,7 @@ Add the package to your project:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/verkada/Verkada-Pass-iOS-SDK.git", from: "0.4.0")
+    .package(url: "https://github.com/verkada/Verkada-Pass-iOS-SDK.git", from: "0.5.1")
 ]
 ```
 

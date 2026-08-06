@@ -1,5 +1,5 @@
 // Carrier target: exists only to attach the xcframework's SPM dependencies
-// (KeychainAccess, Sodium) to the public product graph — something a
+// (KeychainAccess, Clibsodium) to the public product graph — something a
 // `.binaryTarget` cannot do on its own.
 //
 // It deliberately does NOT `@_exported import VerkadaPassSDK`. The xcframework

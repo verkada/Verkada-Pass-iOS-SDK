@@ -29,7 +29,10 @@ let package = Package(
             dependencies: [
                 .target(name: "VerkadaPassSDK"),
                 .product(name: "KeychainAccess", package: "KeychainAccess"),
-                .product(name: "Sodium", package: "swift-sodium"),
+                // Clibsodium only. The `Sodium` Swift wrapper was dropped from the SDK because
+                // its ObjC-visible classes collide with any other framework in the host app that
+                // also links swift-sodium; attaching it here would put those same classes back
+                // into the consumer's binary and undo that fix.
                 .product(name: "Clibsodium", package: "swift-sodium"),
             ],
             path: "Sources/VerkadaPassSDKWrapper"

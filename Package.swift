@@ -26,7 +26,12 @@ let package = Package(
             dependencies: [
                 .target(name: "VerkadaPassSDK"),
                 .product(name: "KeychainAccess", package: "KeychainAccess"),
-                .product(name: "Sodium", package: "swift-sodium"),
+                // Clibsodium (the C library) only — NOT swift-sodium's `Sodium` Swift wrapper.
+                // The wrapper compiles ObjC-visible Swift classes (GenericHash.Stream,
+                // SecretStream.XChaCha20Poly1305.Push/PullStream) into every binary that links it,
+                // so apps embedding this framework next to another framework that also links
+                // swift-sodium got "Class _TtCV6Sodium… is implemented in both …" from the ObjC
+                // runtime. The SDK calls libsodium's C API directly as of 0.5.0.
                 .product(name: "Clibsodium", package: "swift-sodium"),
             ],
             path: "Sources/VerkadaPassSDKWrapper"

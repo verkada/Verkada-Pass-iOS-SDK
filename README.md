@@ -16,7 +16,7 @@ Add the package to your project:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/verkada/Verkada-Pass-iOS-SDK.git", from: "0.1.0")
+    .package(url: "https://github.com/verkada/Verkada-Pass-iOS-SDK.git", from: "0.4.0")
 ]
 ```
 
@@ -150,7 +150,7 @@ The SDK is a singleton. All interaction goes through `VerkadaPass.shared`.
 ### Services
 
 - **`BLEService`** — protocol exposing BLE authorization state, the live `connectedEntities` stream, and lifecycle methods (`start`, `stop`, `clean`). Mirrors `PermissionGranting` for permission prompts.
-- **`LocationService`** — protocol exposing location authorization state, `currentLocation`, `nearbyEntities`, and geofence helpers (`isWithinGeofenceRegion`, `isLocationRestrictedWithEnabledGeofence`).
+- **`LocationService`** — protocol exposing location authorization state, `currentLocation`, `nearbyEntities`, geofence helpers (`isWithinGeofenceRegion`, `isLocationRestrictedWithEnabledGeofence`), and `onRegionEntry`, which fires when the device enters a monitored beacon region — including background wakes after the system relaunched your app. Use it to re-arm BLE scanning; `VerkadaPass.shared` wires it for you.
 - **`PermissionGranting`** — common shape for any service that requests a system permission. Provides `authorized`, `authorizationNotAsked`, `authorizationDeniedOrRestricted`, and an `authorizationChanged` Combine subject.
 - **`Logger`** — exposes a `PassthroughSubject<LogLine, Never>` and a configurable `minLevel`.
 
@@ -158,9 +158,9 @@ The SDK is a singleton. All interaction goes through `VerkadaPass.shared`.
 
 | Type | Description |
 | --- | --- |
-| `Shard` | Selects the Verkada Command deployment. Use `.us`, `.eu`, `.au`, or `.staging`. |
+| `Shard` | Selects the Verkada Command deployment. Use `.us`, `.eu`, `.au`, or `.staging`, or build one with `Shard(name:hostMetadata:)` for a deployment the built-ins don't cover (GovCloud, a per-organization shard map). |
 | `DoorSection` | Group of doors/elevators sharing a building and floor. |
-| `DoorRow` | `ObservableObject` view-model for a single door or elevator; exposes `lockState` and `status`. |
+| `DoorRow` | `ObservableObject` view-model for a single door or elevator; exposes `lockState` and `status`. After a successful `unlock(_:)` the row publishes `.unlocked(duration)` and returns to `.locked` on its own once that window elapses. |
 | `Door`, `Elevator` | The two concrete `AccessEntity` types the SDK can unlock. |
 | `AccessEntity` | Common protocol for unlockables surfaced by `BLEService` / `LocationService`. |
 | `Building`, `Floor` | Physical groupings used for geofencing and section headers. |

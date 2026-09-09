@@ -6,8 +6,9 @@ let package = Package(
     platforms: [
         // Must match the minos of the xcframework in `binaryTarget` below. Declaring a lower
         // floor than the binary lets consumers build and then crash at launch: dyld refuses a
-        // framework whose minos exceeds the running OS.
-        .iOS(.v13),
+        // framework whose minos exceeds the running OS. `release.sh` in the source repo rewrites
+        // this line from that repo's manifest on every release, so it tracks the binary itself.
+        .iOS(.v15),
     ],
     products: [
         .library(

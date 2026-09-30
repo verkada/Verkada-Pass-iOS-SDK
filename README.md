@@ -160,7 +160,7 @@ The SDK is a singleton. All interaction goes through `VerkadaPass.shared`.
 
 | Type | Description |
 | --- | --- |
-| `Shard` | Selects the Verkada Command deployment. Use `.us`, `.eu`, `.au`, `.gov` (VerkadaGov), or `.staging`. |
+| `Shard` | Selects the Verkada Command deployment. Use `.us`, `.usOhio`, `.eu`, `.au`, `.gov` (VerkadaGov), or `.staging`. |
 | `DoorSection` | Group of doors/elevators sharing a building and floor. |
 | `DoorRow` | `ObservableObject` view-model for a single door or elevator; exposes `lockState` and `status`. After a successful `unlock(_:)` the row publishes `.unlocked(duration)` and returns to `.locked` on its own once that window elapses. |
 | `Door`, `Elevator` | The two concrete `AccessEntity` types the SDK can unlock. |

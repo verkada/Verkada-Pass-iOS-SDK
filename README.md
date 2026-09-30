@@ -30,7 +30,7 @@ The example app does not embed an API key. On first launch it shows a **Login** 
 2. From your own server (or a script) call the Verkada public API to exchange your API key for an auth token (`POST /token` with `x-api-key`) and then mint an SDK token for the target user (`POST /v2/access/user/pass/sdk_token` with `user_id` and the copied `code_challenge`).
 3. Paste the returned SDK token into the **SDK Token** field and tap **Login**. On success the app advances to the doors list and persists credentials, so subsequent launches skip login until you tap **Logout** in the top-right.
 
-Override the `shard` constant at the top of [`VerkadaPassSDKExampleApp.swift`](verkada-pass-sdk-example/VerkadaPassSDKExample/VerkadaPassSDKExampleApp.swift) to point the example at a different region (defaults to `.staging`).
+Override the `shard` constant at the top of [`VerkadaPassSDKExampleApp.swift`](verkada-pass-sdk-example/VerkadaPassSDKExample/VerkadaPassSDKExampleApp.swift) to point the example at a different region (defaults to `.us`).
 
 ## Project setup
 

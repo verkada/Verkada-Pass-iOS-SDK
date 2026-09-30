@@ -81,8 +81,10 @@ if !sdk.isConfigured {
         codeChallenge: codeChallenge
     )
 
-    // 1c. Configure for a specific client/shard. The user identity is derived
-    //     from the SDK token itself. Credentials are persisted across launches.
+    // 1c. Configure with your app's client ID (identifies your app to the
+    //     backend) and the shard hosting the organization. The user identity
+    //     is derived from the SDK token itself. Credentials are persisted
+    //     across launches.
     try await sdk.configure(
         with: sdkToken,
         clientID: "<your-client-id>",
@@ -141,7 +143,7 @@ The SDK is a singleton. All interaction goes through `VerkadaPass.shared`.
 | `locationService: LocationService` | Drives location updates, geofence monitoring, and beacon ranging. |
 | `logger: Logger` | Stream of structured log lines. |
 | `generateChallenge() -> String` | Generates a fresh PKCE `code_verifier` (kept in memory) and returns the matching base64url-encoded SHA-256 `code_challenge` for the host app to send to the Verkada public API. |
-| `configure(with:clientID:shard:) async throws` | Binds the SDK to a user/shard using a pre-fetched SDK token. The host app is responsible for exchanging its API key for this token. |
+| `configure(with:clientID:shard:) async throws` | Binds the SDK to a user/shard using a pre-fetched SDK token. `clientID` identifies your app; it is sent on backend requests so the server can attribute traffic to a specific consumer. The host app is responsible for exchanging its API key for this token. |
 | `isConfigured: Bool` | `true` when the SDK has cached credentials from a previous `configure(...)` and `clearConfiguration()` has not been called since. Read this on launch to decide whether to skip the configure step. |
 | `clearConfiguration()` | Stops BLE scanning/advertising, stops location monitoring, and wipes cached authentication data. The host must call `configure(...)` again before any further SDK calls. |
 | `fetchDevices() async throws -> [DoorSection]` | Loads unlockables and refreshes BLE/location state. |

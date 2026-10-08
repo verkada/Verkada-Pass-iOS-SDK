@@ -9,7 +9,7 @@ import SwiftUI
 import VerkadaPassSDK
 
 // Shard the example app talks to. Override here to point at a different region.
-let shard: Shard = .usOhio
+let shard: Shard = .us
 
 @main
 struct VerkadaPassSDKExampleApp: App {

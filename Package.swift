@@ -42,8 +42,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "VerkadaPassSDK",
-            url: "https://github.com/verkada/Verkada-Pass-iOS-SDK/releases/download/1.0.2/VerkadaPassSDK.xcframework.zip",
-            checksum: "eeb89c7d7626b9ec44220f25107c627a01956d7128e4832658ee6684d49e2171"
+            url: "https://github.com/verkada/Verkada-Pass-iOS-SDK/releases/download/1.0.3/VerkadaPassSDK.xcframework.zip",
+            checksum: "0b335967d74f36f68bd8e47b60c56b0e0855fe1756b68fac03f5b6b3646c7b79"
         ),
     ]
 )

@@ -238,7 +238,7 @@ do {
 }
 ```
 
-Network/API failures from `configure(...)` and `fetchDevices()` surface as `APIError` (typed server response) or `HTTPError` (non-2xx status). `APIError.isTokenExpired` indicates that the host should re-authenticate. Treat `HTTPError` with `statusCode == 401` the same way: a revoked or expired token can come back with a body that doesn't decode as `APIError`.
+Network/API failures from `configure(...)` and `fetchDevices()` surface as `APIError` (typed server response) or `HTTPError` (non-2xx status). `APIError.isTokenExpired` indicates that the host should re-authenticate.
 
 ## License
 

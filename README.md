@@ -53,7 +53,27 @@ Add the following keys with messages explaining why your app needs each permissi
 | `NSLocationWhenInUseUsageDescription` | Detect when the user is near a building so doors can be unlocked. |
 | `NSLocationAlwaysAndWhenInUseUsageDescription` | Allow geofence monitoring while the app is in the background. |
 
-`UIBackgroundModes` should include `bluetooth-central` and `bluetooth-peripheral` (the example app's `Info.plist` already does).
+`UIBackgroundModes` should include `bluetooth-central` and `bluetooth-peripheral` (the example app's `Info.plist` already does). Without them iOS can't relaunch your app for a reader in the background, and the SDK skips Bluetooth state restoration.
+
+### App launch
+
+Access `VerkadaPass.shared` early in `application(_:didFinishLaunchingWithOptions:)`, before any `await`. With the SwiftUI app lifecycle, do it in a `UIApplicationDelegateAdaptor`, not in a view's `onAppear` or `task`; views usually don't appear when iOS launches the app in the background.
+
+When iOS relaunches your app for a Bluetooth event or a beacon region, creating the SDK recreates its Bluetooth managers so iOS can hand over the restored state. The SDK also restores the reader list and the organization's BLE unlock setting from the last successful `fetchDevices()`, so BLE unlock works before the app reaches the network:
+
+```swift
+func application(_ application: UIApplication, didFinishLaunchingWithOptions options: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    let sdk = VerkadaPass.shared
+    if sdk.isConfigured {
+        sdk.bluetoothService.start()
+        sdk.locationService.startMonitoring()
+        Task { try? await sdk.fetchDevices() } // refresh in the background; retry on network errors
+    }
+    return true
+}
+```
+
+The BLE exchange with a reader doesn't use the network: the SDK reads the user and the device key from the keychain. It works while the phone is locked, as long as the phone has been unlocked once since it last started.
 
 ## Quick start
 
@@ -96,12 +116,13 @@ if !sdk.isConfigured {
 sdk.bluetoothService.askPermission()
 sdk.locationService.askPermission()
 
-// 3. Load the user's doors and elevators. This MUST run before
-//    bluetoothService.start() / locationService.startMonitoring() —
-//    fetchDevices() pulls the reader list, building/floor geofences,
-//    and org configuration the BLE and location services need to
-//    operate. Starting them first leaves them with no readers to
-//    advertise to or regions to monitor.
+// 3. Load the user's doors and elevators. Right after configure(...),
+//    this MUST run before bluetoothService.start() /
+//    locationService.startMonitoring() — fetchDevices() pulls the reader
+//    list, building/floor geofences, and org configuration the BLE and
+//    location services need. On later launches the SDK restores the
+//    reader list and org configuration from the last successful fetch
+//    (see "App launch"), so you can start first and refresh afterwards.
 let sections: [DoorSection] = try await sdk.fetchDevices()
 
 // 4. Start scanning and locating.
@@ -116,12 +137,13 @@ do {
     print(error.message)
 }
 
-// 6. When the user signs out, clear the cached configuration. The next
+// 6. When the user signs out, clear the cached configuration. This also
+//    stops BLE and forgets the user's readers and cached doors. The next
 //    launch will see isConfigured == false and prompt for login again.
 sdk.clearConfiguration()
 ```
 
-> **Order matters:** always call `fetchDevices()` before starting the BLE or location services. The fetch is what populates the reader list and geofence data those services rely on — if you call `bluetoothService.start()` or `locationService.startMonitoring()` first, they'll come up with nothing to do until the next `fetchDevices()` completes. Call `fetchDevices()` again whenever you want to pick up server-side changes (e.g. when the app returns to the foreground).
+> **Order matters on the first run:** right after `configure(...)`, call `fetchDevices()` before starting the BLE or location services. The fetch is what populates the reader list and geofence data those services rely on — until one succeeds, `bluetoothService.start()` and `locationService.startMonitoring()` have nothing to do. After that, the SDK keeps the last successful fetch across launches, so on later launches start them right away (see [App launch](#app-launch)). Call `fetchDevices()` again whenever you want to pick up server-side changes (e.g. when the app returns to the foreground). If only the organization-configuration request fails during a fetch, the SDK keeps the last known BLE unlock setting instead of turning BLE unlock off.
 
 ## Unlock paths
 
@@ -145,8 +167,8 @@ The SDK is a singleton. All interaction goes through `VerkadaPass.shared`.
 | `generateChallenge() -> String` | Generates a fresh PKCE `code_verifier` (kept in memory) and returns the matching base64url-encoded SHA-256 `code_challenge` for the host app to send to the Verkada public API. |
 | `configure(with:clientID:shard:) async throws` | Binds the SDK to a user/shard using a pre-fetched SDK token. `clientID` identifies your app; it is sent on backend requests so the server can attribute traffic to a specific consumer. The host app is responsible for exchanging its API key for this token. |
 | `isConfigured: Bool` | `true` when the SDK has cached credentials from a previous `configure(...)` and `clearConfiguration()` has not been called since. Read this on launch to decide whether to skip the configure step. |
-| `clearConfiguration()` | Stops BLE scanning/advertising, stops location monitoring, and wipes cached authentication data. The host must call `configure(...)` again before any further SDK calls. |
-| `fetchDevices() async throws -> [DoorSection]` | Loads unlockables and refreshes BLE/location state. |
+| `clearConfiguration()` | Stops BLE scanning/advertising, forgets the user's readers and cached doors, stops location monitoring, and wipes cached authentication data. The host must call `configure(...)` again before any further SDK calls. |
+| `fetchDevices() async throws -> [DoorSection]` | Loads unlockables, refreshes BLE/location state, and caches the reader list and organization configuration for the next launch. Stops BLE if the organization has BLE unlock turned off. |
 | `unlock(_:) async throws -> Int?` | Performs a mobile (remote) unlock; returns the unlock duration in seconds. Independent from BLE unlocks (proximity-based), which are driven by the reader once `bluetoothService.start()` is running. |
 
 ### Services
